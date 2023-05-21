@@ -34,7 +34,7 @@ build {
   }
 
   provisioner "shell" {
-    inline = ["echo Runnig ${var.docker_image} Docker image and test this change in git"]
+    inline = ["echo Runnig ${var.docker_image} Docker image and test this change in github desktop"]
   }
 
 }
