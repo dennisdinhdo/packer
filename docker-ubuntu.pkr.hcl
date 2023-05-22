@@ -43,4 +43,16 @@ build {
     inline = ["echo Runnig ${var.docker_image} Docker image."]
   }
 
+  post-processor "docker-tag" {
+    repository = "learn-packer"
+    tags = ["ubuntu-xenial", "packer-rocks"]
+    only = ["docker.ubuntu"]
+  }
+
+  post-processor "docker-tag" {
+    repository = "learn-packer"
+    tags = ["ubuntu-bionix", "packer-sucks"]
+    only = ["docker.ubuntu-bionic"]
+  }
+
 }
