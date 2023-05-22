@@ -39,7 +39,7 @@ build {
     ]
   }
 
-  provisioner "shell"
+  provisioner "shell"{
     inline = ["echo Runnig ${var.docker_image} Docker image."]
   }
 
